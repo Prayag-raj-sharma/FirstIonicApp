@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar color="medium">
+    <ion-title routerLink="/landing">
+        Cruise Fun Booking System
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/staff-upload">
+        Upload Details
+      </ion-button>
+      <ion-button routerLink="/cruise-info">
+        Cruise Details
+      </ion-button>
+      <ion-button routerLink="/booking-info">
+        Booking Details
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<h1>Welcome, {{ staffName }}</h1>
+
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <h1>Upload the Curise Data Here</h1>
+  <ion-list>
+    <ion-item>
+      <ion-label>Select CSV File</ion-label>
+      <ion-input
+        type="file"
+        accept=".csv"
+        (change)="onFileSelected($event)"
+      ></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="full" (click)="uploadFile()">Upload</ion-button>
+</ion-card-content>
+</ion-card>
+</ion-content>

@@ -1,0 +1,11 @@
+<div mat-dialog-content>
+  <h2>Update Booking</h2>
+  <mat-form-field>
+    <input matInput placeholder="Number of Bookings Required" [(ngModel)]="bookingsRequired">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="closeDialog()">Cancel</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Book</button>
+</div>
+

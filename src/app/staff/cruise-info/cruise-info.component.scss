@@ -1,0 +1,76 @@
+/* staff/cruise-info/cruise-info.component.scss */
+
+/*
+.cruise-table {
+    width: 100%;
+    border-collapse: collapse;
+   
+  }
+  
+  .cruise-row {
+    border: 1px solid #ccc;
+  }
+  
+  .cruise-name,
+  .customer-list,
+  .customer-id,
+  .action-buttons {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #ccc;
+  }
+  
+  .customer-list, 
+  .customer-id{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .action-buttons ion-button {
+    margin: 4px;
+  }
+  
+  /* Add some padding to the table heading 
+  thead th {
+    padding: 8px;
+  }
+  
+  .cruise-row:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  */
+
+  /* staff/cruise-info/cruise-info.component.scss */
+
+.cruise-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.cruise-card {
+  width: calc(50% - 16px); /* Two columns, with some spacing */
+  border: 1px solid #ccc;
+  margin-bottom: 16px;
+  padding: 16px;
+}
+
+.cruise-name {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.customer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.customer-item {
+  margin-bottom: 8px;
+}
+
+.action-buttons ion-button {
+  margin-top: 8px;
+}

@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="medium">
+    <ion-title routerLink="/landing">
+        Cruise Fun Booking System
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/staff-upload">
+        Upload Details
+      </ion-button>
+      <ion-button routerLink="/cruise-info">
+        Cruise Details
+      </ion-button>
+      <ion-button routerLink="/booking-info">
+        Booking Details
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<h1>Welcome, {{ staffName }}</h1>
+<h5>Cruise Booking Information</h5>
+
+<ion-content>
+  <ion-searchbar [debounce]="1000" (ionInput)="searchCruise($event)"></ion-searchbar>
+
+  <div class="cruise-container">
+    <div *ngFor="let cruise of displayedCruises" class="cruise-card">
+      <div class="cruise-name">{{ cruise.name }}</div>
+      <div class="customer-list">
+        <div *ngFor="let customer of cruise.customers" class="customer-item">
+          {{ customer.id }} - {{ customer.name }} 
+        </div>
+      </div>
+      <div class="action-buttons">
+        <ion-button color="warning" (click)="updateCruise(cruise)">Update</ion-button>
+        <ion-button color="danger"  (click)="deleteCruise(cruise)">Delete</ion-button>
+       </div>
+    </div>
+  </div>
+</ion-content>

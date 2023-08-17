@@ -1,0 +1,44 @@
+<ion-content>
+  <h1 class="heading">Login</h1>
+  <ion-grid>
+    <ion-row justify-content-center align-items-center class="full-height">
+      <ion-col size="12" size-md="8" size-lg="6" offset-lg="3">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Enter Details</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-item>
+              <ion-label position="floating">Enter Username</ion-label>
+              <ion-input type="text"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Enter Password</ion-label>
+              <ion-input type="password"></ion-input>
+            </ion-item>
+            <ion-list>
+              <ion-radio-group [(ngModel)]="chosenRole">
+                <ion-item>
+                  <ion-label>Staff</ion-label>
+                  <ion-radio value="Staff"></ion-radio>
+                  <ion-label>Customer</ion-label>
+                  <ion-radio value="Customer"></ion-radio>
+                </ion-item>
+              </ion-radio-group>
+            </ion-list>
+            <div *ngIf="chosenRole">
+              <p>You have chosen: {{ chosenRole }}</p>
+            </div>
+            <ion-button expand="full">Submit</ion-button>
+          </ion-card-content>
+        </ion-card>
+        <p class="ion-text-center">Don't have an account? <a routerLink="/signup">Sign Up</a></p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+
+
+
+
